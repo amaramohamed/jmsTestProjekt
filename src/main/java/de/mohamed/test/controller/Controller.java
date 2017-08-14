@@ -12,12 +12,12 @@ public class Controller {
 
 	@Autowired
 	private JmsTemplate jmsTemplate;
-	
+
 	@GetMapping("/send")
 	public String send() {
 		Objekt objekt = new Objekt(1, "Das ist eine schöne Nachricht, um JMS zu testen.");
 		jmsTemplate.convertAndSend("TestQueue", objekt);
 		return objekt.toString();
 	}
-	
+
 }
