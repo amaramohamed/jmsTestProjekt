@@ -1,4 +1,4 @@
-# jmsTestProjekt
+# jmsTestProjekt Mohamed
 ein kleines Projekt, um Java Message Service zu testen.
 # Entwicklung
 JMS (Java Message Service) ist ein Java Message Oriented Middleware und er wird verwendet, damit die Komponente mit einander durch Messages kommunizieren können. Er funktioniert wie folgendes:
