@@ -9,7 +9,8 @@ import de.mohamed.test.domain.Objekt;
 
 @RestController
 public class Controller {
-
+	
+	
 	@Autowired
 	private JmsTemplate jmsTemplate;
 
