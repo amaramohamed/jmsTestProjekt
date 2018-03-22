@@ -12,7 +12,7 @@ public class Controller {
 	
 	
 	@Autowired
-	private JmsTemplate jmsTemplate;
+	private JmsTemplate jmsTemplate
 
 	@GetMapping("/send")
 	public String send() {
