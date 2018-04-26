@@ -19,5 +19,4 @@ public class Controller {
 		jmsTemplate.convertAndSend("TestQueue", objekt);
 		return objekt.toString();
 	}
-
 }
