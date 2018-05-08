@@ -16,6 +16,7 @@ public class Controller {
 	public String send() {
 		Objekt objekt = new Objekt(1, "Das ist eine schöne Nachricht, um JMS zu testen.");
 		jmsTemplate.convertAndSend("TestQueue", objekt);
+		test("hallo");
 		return objekt.toString();
 	}
 }
