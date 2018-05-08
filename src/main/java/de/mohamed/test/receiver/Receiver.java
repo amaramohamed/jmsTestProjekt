@@ -7,7 +7,6 @@ import de.mohamed.test.domain.Objekt;
 
 @Component
 public class Receiver {
-
 	@JmsListener(destination = "TestQueue", containerFactory= "MeinFactory")
 	public void receiveObjekt(Objekt objekt) {
 		System.out.println(objekt.toString());
