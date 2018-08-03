@@ -9,13 +9,15 @@ import de.mohamed.test.domain.Objekt;
 
 @RestController
 public class Controller {
-	
-	@Autowired
-	private JmsTemplate jmsTemplate;
-	@GetMapping("/send")
-	public String send() {
-		Objekt objekt = new Objekt(1, "Das ist eine schöne Nachricht, um JMS zu testen.");
-		jmsTemplate.convertAndSend("TestQueue", objekt);
-		return objekt.toString();
-	}
+
+    @Autowired
+    private JmsTemplate jmsTemplate;
+
+    @GetMapping("/send")
+    public String send() {
+        final Objekt objekt = new Objekt(1, "Das ist eine schöne Nachricht, um JMS zu testen.");
+        System.out.println("Das ist mein Objekt " + objekt);
+        this.jmsTemplate.convertAndSend("TestQueue", objekt);
+        return objekt.toString();
+    }
 }
